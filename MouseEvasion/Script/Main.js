@@ -21,6 +21,12 @@ function loop() {
 
     if (scene === 'Title') {
         loopTitle()
+    } else if (scene === 'Save') {
+        loopSave()
+    } else if (scene === 'Level') {
+        loopLevel()
+    } else if (scene === 'Game') {
+        loopGame()
     }
 
     gameFramePrevious = Date.now()
