@@ -34,7 +34,20 @@ function loop() {
 }
 
 function mouseUp(event) {
+    let canvasRect = canvas.getBoundingClientRect()
+    let x = event.clientX - canvasRect.left
+    let y = event.clientY - canvasRect.top
+    let button = event.button
 
+    if (scene === 'Title') {
+        mouseUpTitle(x, y, button)
+    } else if (scene === 'Save') {
+        mouseUpSave(x, y, button)
+    } else if (scene === 'Level') {
+        mouseUpLevel(x, y, button)
+    } else if (scene === 'Game') {
+        mouseUpGame(x, y, button)
+    }
 }
 
 function mouseMove(event) {
