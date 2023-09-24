@@ -23,7 +23,9 @@ function mouseUpLevel(x, y, button) {
                         if (sessionVar[selected.file].level[i] > 0) {
                             scene = 'Game'
                             state = ''
+                            canvas.style.cursor = 'none';
                             selected.level = i
+                            levelLoad(selected.level)
                             stageLoad(selected.level, 0)
                             player.position.x = mouse.current.x
                             player.position.y = mouse.current.y

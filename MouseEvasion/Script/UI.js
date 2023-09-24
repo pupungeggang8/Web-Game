@@ -5,6 +5,10 @@ let UI = {
     title : {
         buttonStart : [128, 128, 768, 64],
         textStart : [136, 144],
+        buttonEditor : [128, 192, 768, 64],
+        textEditor : [136, 208],
+        buttonErase : [128, 256, 768, 64],
+        textErase : [136, 272],
     },
 
     saveSelect : {
@@ -21,6 +25,6 @@ let UI = {
     },
 
     game : {
-
+        lowerText : [8, 540]
     }
 }

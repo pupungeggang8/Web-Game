@@ -8,6 +8,7 @@ function main() {
 
     window.addEventListener('mouseup', mouseUp, false)
     window.addEventListener('mousemove', mouseMove, false)
+    window.addEventListener('keyup', keyUp, false)
 
     imageLoad()
     saveInit()
@@ -58,13 +59,22 @@ function mouseMove(event) {
     let x = event.clientX - canvasRect.left
     let y = event.clientY - canvasRect.top
     
-    mouse.current.x = x
-    mouse.current.y = y
+    if (scene === 'Game') {
+        mouseMoveGame(x, y)
+    }
+}
+
+function keyUp(event) {
+    let key = event.key
+
+    if (scene === 'Game') {
+        keyUpGame(key)
+    }
 }
 
 function errorHandle(err, url, line, col, obj) {
     if (obj != null) {
-        cancelAnimationFrame(gameInstace)
+        cancelAnimationFrame(gameInstance)
     }
 }
 

@@ -8,6 +8,7 @@ let delta
 
 let scene = 'Title'
 let state = ''
+let pause = false
 
 let mouse = {
     current : {
@@ -39,6 +40,8 @@ let player = {
     },
     speed : 240,
 }
+
+let levelAll = {}
 
 let field = {
     stage : -1,
