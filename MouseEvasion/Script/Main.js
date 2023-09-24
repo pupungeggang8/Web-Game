@@ -22,7 +22,7 @@ function loop() {
     if (scene === 'Title') {
         loopTitle()
     } else if (scene === 'Save') {
-        loopSave()
+        loopSaveSelect()
     } else if (scene === 'Level') {
         loopLevel()
     } else if (scene === 'Game') {
@@ -42,7 +42,7 @@ function mouseUp(event) {
     if (scene === 'Title') {
         mouseUpTitle(x, y, button)
     } else if (scene === 'Save') {
-        mouseUpSave(x, y, button)
+        mouseUpSaveSelect(x, y, button)
     } else if (scene === 'Level') {
         mouseUpLevel(x, y, button)
     } else if (scene === 'Game') {

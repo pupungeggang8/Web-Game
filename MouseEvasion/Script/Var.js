@@ -9,6 +9,14 @@ let delta
 let scene = 'Title'
 let state = ''
 
+let selected = {
+    file : -1,
+}
+
+let sessionVar = {
+
+}
+
 let player = {
     life : 3,
     lifeMax : 3,
