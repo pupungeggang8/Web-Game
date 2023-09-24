@@ -24,7 +24,9 @@ function mouseUpSaveSelect(x, y, button) {
             if (pointInsideRectArray(x, y, UI.saveSelect.buttonStart[i])) {
                 scene = 'Level'
                 state = ''
-                
+                selected.file = i
+                levelCamera.x = 0
+                levelCamera.y = 0
             } else if (pointInsideRectArray(x, y, UI.saveSelect.buttonErase[i])) {
                 
             }

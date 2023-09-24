@@ -15,7 +15,7 @@ function mouseUpTitle(x, y, button) {
     if (button === 0) {
         if (state === '') {
             if (pointInsideRectArray(x, y, UI.title.buttonStart)) {
-                scene = 'Save'
+                scene = 'SaveSelect'
                 state = ''
             }
         }

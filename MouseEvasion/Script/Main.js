@@ -9,6 +9,9 @@ function main() {
     window.addEventListener('mouseup', mouseUp, false)
     window.addEventListener('mousemove', mouseMove, false)
 
+    imageLoad()
+    saveInit()
+
     gameFrameCurrent = Date.now()
     gameFramePrevious = Date.now() - 16
 
@@ -21,7 +24,7 @@ function loop() {
 
     if (scene === 'Title') {
         loopTitle()
-    } else if (scene === 'Save') {
+    } else if (scene === 'SaveSelect') {
         loopSaveSelect()
     } else if (scene === 'Level') {
         loopLevel()
@@ -41,7 +44,7 @@ function mouseUp(event) {
 
     if (scene === 'Title') {
         mouseUpTitle(x, y, button)
-    } else if (scene === 'Save') {
+    } else if (scene === 'SaveSelect') {
         mouseUpSaveSelect(x, y, button)
     } else if (scene === 'Level') {
         mouseUpLevel(x, y, button)
